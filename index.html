@@ -17,18 +17,25 @@
             --font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
             --transition: 0.3s ease;
         }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         html {
             scroll-behavior: smooth;
         }
+
         body {
             font-family: var(--font-family);
             color: var(--color-text);
             line-height: 1.6;
             overflow-x: hidden;
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+            background: var(--color-bg);
         }
+
         /* Header Navigation */
         header {
             position: fixed;
@@ -40,6 +47,7 @@
             border-bottom: 1px solid var(--color-border);
             box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
         }
+
         nav {
             display: flex;
             justify-content: space-between;
@@ -48,6 +56,7 @@
             max-width: 1400px;
             margin: 0 auto;
         }
+
         .logo-section {
             display: flex;
             align-items: center;
@@ -56,38 +65,45 @@
             font-size: 1.5rem;
             color: var(--color-primary);
         }
+
         .logo-section img {
-            height: 100px; /* Prominent size */
+            height: 110px; /* enlarged logo */
             width: auto;
         }
+
         nav ul {
             display: flex;
             gap: 2rem;
             list-style: none;
         }
+
         nav a {
             text-decoration: none;
             color: var(--color-text);
             transition: color var(--transition);
             font-weight: 500;
         }
+
         nav a:hover {
             color: var(--color-primary);
         }
+
         /* Hero Section */
         .hero {
-            background: linear-gradient(135deg, #667eea 0, #764ba2 100%);
+            background: linear-gradient(135deg, #667eea 0, #764ba2 100);
             color: white;
             padding: 150px 2rem 100px;
             text-align: center;
             margin-top: 80px;
         }
+
         .hero h1 {
             font-size: 3.5rem;
             margin-bottom: 1.5rem;
             font-weight: 800;
             line-height: 1.2;
         }
+
         .hero p {
             font-size: 1.3rem;
             max-width: 800px;
@@ -95,6 +111,7 @@
             opacity: 0.95;
             line-height: 1.8;
         }
+
         .cta-button {
             display: inline-block;
             background: var(--color-accent);
@@ -108,11 +125,83 @@
             cursor: pointer;
             font-size: 1rem;
         }
+
         .cta-button:hover {
             transform: translateY(-2px);
             box-shadow: 0 10px 25px rgba(255, 107, 107, 0.3);
             background: #ff5252;
         }
+
+        /* About Section */
+        .about-section {
+            padding: 80px 2rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .about-text h2 {
+            font-size: 2.2rem;
+            margin-bottom: 1.5rem;
+            color: var(--color-primary);
+        }
+
+        .about-text p {
+            font-size: 1.05rem;
+            color: var(--color-text-light);
+            margin-bottom: 1.5rem;
+            line-height: 1.9;
+        }
+
+        .highlight {
+            background: linear-gradient(120deg, rgba(155, 89, 182, 0.1) 0, rgba(155, 89, 182, 0.05) 100%);
+            padding: 2rem;
+            border-radius: 8px;
+            border-left: 4px solid var(--color-primary);
+        }
+
+        /* Building Tomorrow's Leaders block */
+        .leaders-block-wrapper {
+            padding: 0 2rem 80px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .leaders-block {
+            background: linear-gradient(135deg, #667eea 0, #764ba2 100);
+            border-radius: 12px;
+            height: 420px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            padding: 1rem;
+        }
+
+        .leaders-block img {
+            max-height: 260px;
+            border-radius: 10px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+            margin-bottom: 1rem;
+            object-fit: cover;
+            width: 100%;
+            max-width: 800px;
+        }
+
+        .leaders-block p {
+            color: white;
+            font-size: 1.5rem;
+            text-align: center;
+            padding: 0 1.5rem;
+            font-weight: 600;
+        }
+
         /* Features Section */
         .features-section {
             padding: 80px 2rem;
@@ -120,6 +209,7 @@
             max-width: 1400px;
             margin: 0 auto;
         }
+
         .section-title {
             font-size: 2.5rem;
             margin-bottom: 3rem;
@@ -127,6 +217,7 @@
             color: var(--color-text);
             font-weight: 700;
         }
+
         .section-subtitle {
             font-size: 1.1rem;
             color: var(--color-text-light);
@@ -136,12 +227,14 @@
             margin-left: auto;
             margin-right: auto;
         }
+
         .features-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2rem;
             margin-top: 3rem;
         }
+
         .feature-card {
             background: white;
             padding: 2rem;
@@ -150,87 +243,41 @@
             transition: all var(--transition);
             border-left: 4px solid var(--color-primary);
         }
+
         .feature-card:hover {
             transform: translateY(-8px);
             box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
         }
+
         .feature-card h3 {
             color: var(--color-primary);
             margin-bottom: 1rem;
             font-size: 1.3rem;
         }
+
         .feature-card p {
             color: var(--color-text-light);
             line-height: 1.8;
         }
-        /* About Section */
-        .about-section {
-            padding: 80px 2rem;
-            max-width: 1400px;
-            margin: 0 auto;
-        }
-        .about-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            align-items: center;
-        }
-        .about-text h2 {
-            font-size: 2.2rem;
-            margin-bottom: 1.5rem;
-            color: var(--color-primary);
-        }
-        .about-text p {
-            font-size: 1.05rem;
-            color: var(--color-text-light);
-            margin-bottom: 1.5rem;
-            line-height: 1.9;
-        }
-        .highlight {
-            background: linear-gradient(120deg, rgba(155, 89, 182, 0.1) 0, rgba(155, 89, 182, 0.05) 100%);
-            padding: 2rem;
-            border-radius: 8px;
-            border-left: 4px solid var(--color-primary);
-        }
-        /* Building Leaders Section */
-        .leaders-section {
-            background: linear-gradient(135deg, #667eea 0, #764ba2 100%);
-            border-radius: 12px;
-            min-height: 400px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-direction: column;
-            margin-bottom: 2rem;
-        }
-        .leaders-section img {
-            max-height: 220px;
-            border-radius: 8px;
-            margin-top: 2rem;
-            margin-bottom: 1rem;
-            box-shadow: 0 2px 12px rgba(0,0,0,0.12);
-        }
-        .leaders-section p {
-            color: white;
-            font-size: 1.3rem;
-            text-align: center;
-            padding: 2rem;
-        }
+
         /* Contact Section */
         .contact-section {
-            background: linear-gradient(135deg, #667eea 0, #764ba2 100%);
+            background: linear-gradient(135deg, #667eea 0, #764ba2 100);
             color: white;
             padding: 60px 2rem;
             text-align: center;
         }
+
         .contact-section h2 {
             font-size: 2rem;
             margin-bottom: 1rem;
         }
+
         .contact-section p {
             font-size: 1.1rem;
             margin-bottom: 1.5rem;
         }
+
         .email-link {
             display: inline-block;
             background: white;
@@ -241,10 +288,12 @@
             font-weight: 600;
             transition: all var(--transition);
         }
+
         .email-link:hover {
             transform: scale(1.05);
-            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
         }
+
         /* Footer */
         footer {
             background: var(--color-text);
@@ -253,19 +302,54 @@
             padding: 2rem;
             font-size: 0.9rem;
         }
+
         footer p {
             margin: 0;
         }
+
         /* Responsive */
         @media (max-width: 768px) {
-            nav { flex-direction: column; gap: 1rem; padding: 1rem; }
-            nav ul { flex-direction: column; gap: 1rem; text-align: center; }
-            .hero { padding: 100px 1.5rem 60px; margin-top: 120px; }
-            .hero h1 { font-size: 2.2rem; }
-            .hero p { font-size: 1rem; }
-            .about-content { grid-template-columns: 1fr; gap: 2rem; }
-            .section-title { font-size: 2rem; }
-            .features-grid { grid-template-columns: 1fr; }
+            nav {
+                flex-direction: column;
+                gap: 1rem;
+                padding: 1rem;
+            }
+
+            nav ul {
+                flex-direction: column;
+                gap: 1rem;
+                text-align: center;
+            }
+
+            .hero {
+                padding: 100px 1.5rem 60px;
+                margin-top: 120px;
+            }
+
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .about-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .leaders-block {
+                height: auto;
+            }
         }
     </style>
 </head>
@@ -274,7 +358,7 @@
     <header>
         <nav>
             <div class="logo-section">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/IdeateX_logo.png" alt="IdeateX Logo">
+                <img src="https://agi-prod-file-upload-public-main-use1.s3.amazonaws.com/21f6321a-51f0-417d-84c3-5de027309813" alt="IdeateX Logo">
                 <span>IdeateX</span>
             </div>
             <ul>
@@ -292,10 +376,13 @@
         <a href="#contact" class="cta-button">Get Started</a>
     </section>
 
-    <!-- Building Leaders Section -->
-    <section class="leaders-section">
-        <img src="https://images.unsplash.com/photo-1515165562835-c9ec9b6b77b9?auto=format&fit=crop&w=600&q=80" alt="Building Leaders">
-        <p>Building Tomorrow's Leaders</p>
+    <!-- Building Tomorrow's Leaders Block -->
+    <section class="leaders-block-wrapper">
+        <div class="leaders-block">
+            <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=1000&q=80"
+                 alt="Young professionals in a leadership discussion">
+            <p>Building Tomorrow's Leaders</p>
+        </div>
     </section>
 
     <!-- About Section -->
@@ -323,7 +410,7 @@
             </div>
             <div class="feature-card">
                 <h3>Global Reach</h3>
-                <p>Market access to 25 countries through strategic partnerships with embassies and universities.</p>
+                <p>Market access to 25+ countries through strategic partnerships with embassies and universities.</p>
             </div>
             <div class="feature-card">
                 <h3>Complete Business Support</h3>
@@ -339,14 +426,14 @@
             </div>
             <div class="feature-card">
                 <h3>Funding Support</h3>
-                <p>Access to funding support for startups up to 1 crore and government grants.</p>
+                <p>Access to funding support for startups up to ₹1 crore and government grants.</p>
             </div>
             <div class="feature-card">
-                <h3>Media & PR Support</h3>
-                <p>Professional media and PR support to amplify your startup’s visibility and brand.</p>
+                <h3>Media &amp; PR Support</h3>
+                <p>Professional media and PR support to amplify your startup's visibility and brand.</p>
             </div>
             <div class="feature-card">
-                <h3>Tech & Product Guidance</h3>
+                <h3>Tech &amp; Product Guidance</h3>
                 <p>Expert technology and product support guidance to build scalable solutions.</p>
             </div>
         </div>
@@ -354,11 +441,9 @@
 
     <!-- Contact Section -->
     <section class="contact-section" id="contact">
-        <div class="container">
-            <h2>Ready to Transform Your Vision?</h2>
-            <p>Join IdeateX and become part of a thriving ecosystem of innovators and market leaders.</p>
-            <a href="mailto:info@enlightencapital.in" class="email-link">Get in Touch</a>
-        </div>
+        <h2>Ready to Transform Your Vision?</h2>
+        <p>Join IdeateX and become part of a thriving ecosystem of innovators and market leaders.</p>
+        <a href="mailto:info@enlightencapital.in" class="email-link">Get in Touch</a>
     </section>
 
     <!-- Footer -->
